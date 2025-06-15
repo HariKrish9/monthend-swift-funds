@@ -1,3 +1,4 @@
+
 import { HowItWorks } from "@/components/HowItWorks";
 import { Benefits } from "@/components/Benefits";
 import { LoanCalculator } from "@/components/LoanCalculator";
@@ -5,11 +6,45 @@ import { PreSignupForm } from "@/components/PreSignupForm";
 import { MobileWidgets } from "@/components/MobileWidgets";
 import { FloatingBubbles } from "@/components/FloatingBubbles";
 import { AbstractShapes } from "@/components/AbstractShapes";
+import React, { useEffect, useState } from "react";
+
+const BankBalanceTicker = () => {
+  const [balance, setBalance] = useState(0);
+  useEffect(() => {
+    let frame: number;
+    let cnt = 0;
+    function animate() {
+      if (cnt < 32000) {
+        cnt += Math.ceil((36000 - cnt) / 16);
+        setBalance(cnt);
+        frame = requestAnimationFrame(animate);
+      } else {
+        setBalance(32000);
+        cancelAnimationFrame(frame);
+      }
+    }
+    animate();
+    return () => frame && cancelAnimationFrame(frame);
+  }, []);
+  return (
+    <div className="fixed top-0 left-0 w-full flex items-center justify-center z-50 pointer-events-none">
+      <div className="mt-2 mb-2 px-5 py-2 rounded-xl bg-white/70 shadow-lg ring-1 ring-indigo-200 flex gap-2 text-[1.1rem] font-semibold text-indigo-700 animate-fade-in">
+        <span className="text-indigo-500 font-bold">Bank Balance:</span>
+        <span>
+          ₹{(balance / 100).toLocaleString(undefined, { minimumFractionDigits: 2 })}
+        </span>
+      </div>
+    </div>
+  );
+};
 
 const Index = () => {
   return (
     <main className="bg-gradient-to-b from-indigo-50 via-white to-blue-100 min-h-screen px-0 overflow-x-hidden relative">
       <AbstractShapes />
+
+      {/* Top Bank Balance Ticker */}
+      <BankBalanceTicker/>
 
       {/* Hero Section */}
       <section className="w-full flex flex-col items-center py-20 bg-gradient-to-br from-indigo-700 via-indigo-800 to-blue-900 text-white shadow-2xl relative overflow-hidden">
@@ -26,9 +61,7 @@ const Index = () => {
           <h2 className="text-2xl md:text-4xl font-medium mb-8 animate-fade-in-delay-100 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
             Beat month-end money stress. Instant loans for salaried professionals.
           </h2>
-          <p className="max-w-2xl mx-auto mb-10 text-lg md:text-xl font-light text-blue-100/90 leading-relaxed animate-fade-in-delay-200">
-            Affordable loans from ₹2,000 to ₹20,000 at just 2%/month, automatically repaid when your salary arrives.
-          </p>
+          {/* Removed the "Affordable loans ..." paragraph per your instruction */}
           <a
             href="#get-started"
             className="inline-flex items-center gap-2 bg-white text-indigo-800 font-bold py-4 px-10 rounded-2xl shadow-xl hover:shadow-2xl hover-scale transition-all duration-300 animate-fade-in-delay-300 group"

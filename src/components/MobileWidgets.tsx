@@ -8,11 +8,7 @@ const widgets = [
     content: "₹20,000 in 2 mins",
     icon: CreditCard,
   },
-  {
-    title: "Bank-Level Security",
-    content: "256-bit encrypted",
-    icon: Gift,
-  },
+  // REMOVED: "Bank-Level Security"
   {
     title: "No Paperwork",
     content: "100% digital process",

@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -162,45 +161,42 @@ body {
 }
 
 /* --------- BUBBLE/GRID STYLE --------- */
-/* Add global style for glassmorphic bubble effect */
-.bubble-glossy {
-  background: linear-gradient(120deg, rgba(255,255,255,0.90) 72%, rgba(240,240,255,0.85) 100%);
-  box-shadow: 0 4px 32px 0 rgba(99,102,241,0.08), 0 1.5px 8px 0 rgba(99,102,241,0.13);
-  backdrop-filter: blur(9px) saturate(160%);
-  border: 1.5px solid rgba(128,139,255,0.17);
-  transition: box-shadow 0.2s, transform 0.2s;
-}
-.bubble-glossy:hover {
-  box-shadow: 0 8px 36px 0 rgba(99,102,241,0.18);
-  transform: scale(1.06) translateY(-4px);
+/* Neutral, non-glossy look for icon grid; .bubble-glossy left for future/shadows only if reused */
+.bubble-grid-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.2rem;
+  padding: 0.6rem 0.25rem;
+  background: #f3f4f6; /* minimal soft shade */
+  box-shadow: 0 2px 8px 0 rgba(99,102,241,0.07);
+  transition: box-shadow 0.19s, transform 0.16s;
+  border: none;
 }
 
-/* Packed headline behind the bubble grid */
-.packed-bubbles-headline {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 48px;
+.bubble-grid-icon:hover {
+  box-shadow: 0 4px 16px 0 rgba(99,102,241,0.11);
+  transform: scale(1.04) translateY(-2px);
+}
+
+/* Center label inside icon */
+.bubble-grid-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #312e81;
+  opacity: 0.98;
+  margin-top: 0.37rem;
+  margin-bottom: 0.1rem;
+  height: 1.4rem;
+  width: 100%;
   text-align: center;
-  font-weight: 900;
-  opacity: 0.22;
-  pointer-events: none;
-  z-index: 0;
-  letter-spacing: 0.02em;
-  font-family: inherit;
-  line-height: 1.05;
-  user-select: none;
-  font-size: 2.2rem;
-  text-shadow:
-    0 9px 25px rgba(80, 92, 250, 0.10),
-    0 1px 2px rgba(100, 116, 255, 0.11);
-}
-@media (max-width: 768px) {
-  .packed-bubbles-headline { font-size: 1.35rem; top: 29px; }
-  .packed-bubbles-grid { max-width: 99vw; }
 }
 
-/* Responsive, packed grid for bubbles */
+/* -------------- packed grid unchanged --------------- */
 .packed-bubbles-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -208,7 +204,7 @@ body {
   width: 100%;
   max-width: 660px;
   justify-content: center;
-  margin-top: 96px; /* separate from headline */
+  margin-top: 96px;
   position: relative;
   z-index: 2;
 }
@@ -279,4 +275,3 @@ body {
 @media (max-width: 380px) {
   .widget-glossy { padding: 0.64rem 0.6rem !important;}
 }
-
