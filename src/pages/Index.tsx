@@ -1,3 +1,4 @@
+
 import { HowItWorks } from "@/components/HowItWorks";
 import { Benefits } from "@/components/Benefits";
 import { PreSignupForm } from "@/components/PreSignupForm";
@@ -12,6 +13,7 @@ import { PartnersSection } from "@/components/PartnersSection";
 import React from "react";
 import { HeroBackgroundAnimation } from "@/components/HeroBackgroundAnimation";
 import HeroAbstractMotion from "@/components/HeroAbstractMotion";
+import HeroMenuOptions from "@/components/HeroMenuOptions";
 
 const Index = () => {
   return (
@@ -20,9 +22,8 @@ const Index = () => {
       <ModernAbstracts />
 
       {/* Hero Section - Fi.money style */}
-      <section className="w-full min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-indigo-700 via-indigo-800 to-blue-900 text-white relative">
+      <section className="w-full min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-indigo-700 via-indigo-800 to-blue-900 text-white relative py-16">
         <HeroBackgroundAnimation />
-        
         {/* MonthEnd Logo */}
         <div className="absolute top-6 left-6 z-20">
           <div className="backdrop-blur-md bg-white/10 rounded-xl shadow-lg shadow-black/10 p-2 flex items-center">
@@ -34,26 +35,21 @@ const Index = () => {
             />
           </div>
         </div>
-        
-        <AnimatedMobilePhone />
-        
-        {/* Background animation elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
+
+        {/* Animated Mobile Phone FRONT AND CENTER */}
+        <div className="relative z-20 flex flex-col items-center w-full max-w-lg">
+          <AnimatedMobilePhone />
+          <HeroMenuOptions />
         </div>
-        
-        {/* HERO TEXT & NEW ABSTRACT MOTION */}
-        <div className="relative z-10 text-center max-w-4xl px-4">
-          {/* --- MINIMAL ABSTRACT ANIMATION TOP --- */}
+
+        {/* Abstract motion graphics at top */}
+        <div className="relative z-10 text-center max-w-4xl px-4 w-full mt-10">
           <HeroAbstractMotion />
-          {/* Main Heading and subheading */}
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 drop-shadow-lg animate-fade-in">
-            MonthEnd
-          </h1>
+          {/* Tagline only */}
           <h2 className="text-2xl md:text-4xl font-medium mb-8 animate-fade-in-delay-100 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-            Beat month-end money stress. Instant loans for salaried professionals.
+            Beat month-end money stress. Instant loans for salaried professionals with monthend
           </h2>
+          {/* Get Started button */}
           <a
             href="#get-started"
             className="inline-flex items-center gap-2 bg-white text-indigo-800 font-bold py-4 px-10 rounded-2xl shadow-xl hover:shadow-2xl hover-scale transition-all duration-300 animate-fade-in-delay-300 group"
@@ -61,6 +57,11 @@ const Index = () => {
             Get Started
             <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
           </a>
+        </div>
+        {/* Background animation elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
         </div>
       </section>
 
