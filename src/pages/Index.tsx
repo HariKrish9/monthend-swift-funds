@@ -25,14 +25,14 @@ const Index = () => {
       <section className="w-full min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-indigo-700 via-indigo-800 to-blue-900 text-white relative py-16">
         <HeroBackgroundAnimation />
 
-        {/* Big Logo - further up and left, absolute, no bg */}
+        {/* Big Logo - Top left, bold effect */}
         <div
           className="
             absolute z-30 
             left-2
-            top-[10vh]
-            md:left-6 md:top-[10vh]
-            lg:left-10 lg:top-[10vh]
+            top-0
+            md:left-6 md:top-0
+            lg:left-10 lg:top-0
             flex items-center
             pointer-events-none"
         >
@@ -42,10 +42,11 @@ const Index = () => {
             className="h-28 w-auto md:h-40 lg:h-48 object-contain"
             style={{
               background: "none",
-              boxShadow: "none",
-              borderRadius: "0",
+              boxShadow: "0 4px 32px 4px rgba(80,90,255,0.18), 0 0 0 3px #fff", // thicker, more visible shadow + white outline
+              borderRadius: "8px",
+              border: "2.5px solid #2f3480",
               padding: 0,
-              filter: 'drop-shadow(0 8px 32px rgba(80,90,255,0.10))',
+              filter: 'contrast(1.15) brightness(1) drop-shadow(0 8px 36px rgba(80,90,255,0.2))',
             }}
             draggable={false}
           />
