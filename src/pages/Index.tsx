@@ -1,10 +1,12 @@
+
 import { HowItWorks } from "@/components/HowItWorks";
 import { Benefits } from "@/components/Benefits";
 import { LoanCalculator } from "@/components/LoanCalculator";
 import { PreSignupForm } from "@/components/PreSignupForm";
-import { MobileWidgets } from "@/components/MobileWidgets";
-import { FloatingBubbles } from "@/components/FloatingBubbles";
+import { RevolvingMobileWidgets } from "@/components/RevolvingMobileWidgets";
+import { MoneyBubbles } from "@/components/MoneyBubbles";
 import { AbstractShapes } from "@/components/AbstractShapes";
+import { ModernAbstracts } from "@/components/ModernAbstracts";
 import React from "react";
 import { HeroBackgroundAnimation } from "@/components/HeroBackgroundAnimation";
 
@@ -12,6 +14,7 @@ const Index = () => {
   return (
     <main className="bg-gradient-to-b from-indigo-50 via-white to-blue-100 min-h-screen px-0 overflow-x-hidden relative">
       <AbstractShapes />
+      <ModernAbstracts />
 
       {/* Hero Section */}
       <section className="w-full flex flex-col items-center py-20 bg-gradient-to-br from-indigo-700 via-indigo-800 to-blue-900 text-white shadow-2xl relative overflow-hidden">
@@ -40,16 +43,8 @@ const Index = () => {
       </section>
 
       {/* Money When You Need It Most Section */}
-      <section className="w-full relative flex items-center justify-center min-h-[480px] md:min-h-[570px] bg-[linear-gradient(180deg,#f5f7ff_63%,#f1f5fd_100%)] overflow-x-hidden px-0">
-        <div className="absolute left-0 right-0 top-1 mx-auto w-full h-[100px] pointer-events-none select-none z-0" aria-hidden></div>
-        <div className="relative w-full max-w-6xl mx-auto flex flex-col items-center justify-center">
-          <FloatingBubbles />
-          <div className="relative z-20 mt-0 md:mt-4 text-center flex flex-col items-center w-full max-w-xl">
-            <p className="text-indigo-900/90 text-base md:text-lg font-semibold drop-shadow-sm animate-fade-in">
-              From groceries to gadgets, bills to gifts — MonthEnd covers your urgent expenses, so you can breathe easy till payday.
-            </p>
-          </div>
-        </div>
+      <section className="w-full relative flex items-center justify-center min-h-[480px] md:min-h-[570px] bg-[linear-gradient(180deg,#f5f7ff_63%,#f1f5fd_100%)] overflow-x-hidden px-4 py-16">
+        <MoneyBubbles />
       </section>
 
       {/* Problem Statement with Mobile Widgets */}
@@ -77,7 +72,7 @@ const Index = () => {
           </p>
         </div>
         <div className="w-full md:w-5/12 flex justify-center animate-slide-in-right">
-          <MobileWidgets />
+          <RevolvingMobileWidgets />
         </div>
       </section>
 
