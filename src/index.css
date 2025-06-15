@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -112,8 +111,9 @@ html {
 body {
   min-height: 100vh;
   overscroll-behavior-y: none;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+  /* Removed overflow-x and scroll-behavior here, as Tailwind handles it. */
+  /* overflow-x: hidden; (removed this) */
+  /* scroll-behavior: smooth; (removed this) */
 }
 
 /* Remove default scrollbar styling for webkit browsers */

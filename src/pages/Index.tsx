@@ -1,4 +1,3 @@
-
 import { HowItWorks } from "@/components/HowItWorks";
 import { Benefits } from "@/components/Benefits";
 import { PreSignupForm } from "@/components/PreSignupForm";
@@ -15,12 +14,12 @@ import { HeroBackgroundAnimation } from "@/components/HeroBackgroundAnimation";
 
 const Index = () => {
   return (
-    <main className="bg-gradient-to-b from-indigo-50 via-white to-blue-100 min-h-screen relative">
+    <main className="bg-gradient-to-b from-indigo-50 via-white to-blue-100 relative">
       <AbstractShapes />
       <ModernAbstracts />
 
       {/* Hero Section - Fi.money style */}
-      <section className="w-full min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-indigo-700 via-indigo-800 to-blue-900 text-white relative overflow-hidden">
+      <section className="w-full min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-indigo-700 via-indigo-800 to-blue-900 text-white relative">
         <HeroBackgroundAnimation />
         
         {/* MonthEnd Logo */}
