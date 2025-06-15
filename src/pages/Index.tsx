@@ -94,12 +94,6 @@ const Index = () => {
         </div>
         <div className="w-full md:w-5/12 flex justify-center animate-slide-in-right flex-col items-center">
           <RevolvingMobileWidgets />
-          {/* Supporting text under Repairs icon */}
-          <div className="w-full flex justify-center">
-            <span className="text-indigo-700 font-medium text-base mt-2 block text-center">
-              We get your urgent expenses covered
-            </span>
-          </div>
         </div>
       </section>
 
