@@ -1,24 +1,27 @@
 
 import { HowItWorks } from "@/components/HowItWorks";
 import { Benefits } from "@/components/Benefits";
-import { LoanCalculator } from "@/components/LoanCalculator";
 import { PreSignupForm } from "@/components/PreSignupForm";
 import { RevolvingMobileWidgets } from "@/components/RevolvingMobileWidgets";
-import { MoneyBubbles } from "@/components/MoneyBubbles";
+import { FloatingBubbles } from "@/components/FloatingBubbles";
 import { AbstractShapes } from "@/components/AbstractShapes";
 import { ModernAbstracts } from "@/components/ModernAbstracts";
+import { SimpleLoanCalculator } from "@/components/SimpleLoanCalculator";
+import AnimatedMobilePhone from "@/components/AnimatedMobilePhone";
 import React from "react";
 import { HeroBackgroundAnimation } from "@/components/HeroBackgroundAnimation";
 
 const Index = () => {
   return (
-    <main className="bg-gradient-to-b from-indigo-50 via-white to-blue-100 min-h-screen px-0 overflow-x-hidden relative">
+    <main className="bg-gradient-to-b from-indigo-50 via-white to-blue-100 min-h-screen overflow-x-hidden relative">
       <AbstractShapes />
       <ModernAbstracts />
 
       {/* Hero Section */}
       <section className="w-full flex flex-col items-center py-20 bg-gradient-to-br from-indigo-700 via-indigo-800 to-blue-900 text-white shadow-2xl relative overflow-hidden">
         <HeroBackgroundAnimation />
+        <AnimatedMobilePhone />
+        
         {/* Background animation elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-float"></div>
@@ -43,8 +46,8 @@ const Index = () => {
       </section>
 
       {/* Money When You Need It Most Section */}
-      <section className="w-full relative flex items-center justify-center min-h-[480px] md:min-h-[570px] bg-[linear-gradient(180deg,#f5f7ff_63%,#f1f5fd_100%)] overflow-x-hidden px-4 py-16">
-        <MoneyBubbles />
+      <section className="w-full relative bg-gradient-to-b from-white to-indigo-50">
+        <FloatingBubbles />
       </section>
 
       {/* Problem Statement with Mobile Widgets */}
@@ -82,14 +85,14 @@ const Index = () => {
       </div>
 
       {/* Loan Calculator */}
-      <section className="w-full max-w-6xl mx-auto px-4 py-16 relative z-10">
+      <section className="w-full px-4 py-16 relative z-10 bg-gradient-to-b from-indigo-50 to-white">
         <div className="text-center mb-12 animate-fade-in">
           <h3 className="text-3xl md:text-4xl font-bold text-indigo-900 mb-4">See Your Loan Details</h3>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
             Customize your loan amount and repayment period to see exactly what you'll pay
           </p>
         </div>
-        <LoanCalculator />
+        <SimpleLoanCalculator />
       </section>
 
       {/* Benefits/Features */}

@@ -42,12 +42,24 @@ export const RevolvingMobileWidgets = () => {
             zIndex: 4 - index
           }}
         >
-          <div className="w-full h-full bg-white rounded-3xl shadow-2xl border-8 border-gray-800 p-6 flex flex-col items-center justify-center text-center">
-            <div className={`w-16 h-16 ${screen.color} rounded-full flex items-center justify-center mb-4`}>
-              <screen.icon className="w-8 h-8 text-white" />
+          {/* iPhone-like design */}
+          <div className="w-full h-full bg-black rounded-[3rem] p-2 shadow-2xl">
+            <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden relative">
+              {/* iPhone notch */}
+              <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-20 h-6 bg-black rounded-full"></div>
+              
+              {/* Screen content */}
+              <div className="flex flex-col items-center justify-center h-full pt-8 px-6">
+                <div className={`w-20 h-20 ${screen.color} rounded-2xl flex items-center justify-center mb-6 shadow-lg`}>
+                  <screen.icon className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-800 mb-3 text-center">{screen.title}</h3>
+                <p className="text-gray-600 text-center text-lg">{screen.content}</p>
+              </div>
+              
+              {/* Home indicator */}
+              <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gray-300 rounded-full"></div>
             </div>
-            <h3 className="text-xl font-bold text-gray-800 mb-2">{screen.title}</h3>
-            <p className="text-gray-600">{screen.content}</p>
           </div>
         </div>
       ))}

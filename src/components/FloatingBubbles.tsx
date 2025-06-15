@@ -5,55 +5,57 @@ import {
   Users, Globe, Bed, BookOpen, Wallet, Coffee, Leaf, PartyPopper, Key, Wrench, HeartPulse,
 } from "lucide-react";
 
-// Use only Lucide icons as allowed and fill to >30
 const icons = [
-  { icon: Gift, label: "Gifts" }, { icon: House, label: "Home" }, { icon: ShoppingCart, label: "Groceries" },
-  { icon: CreditCard, label: "Credit" }, { icon: Utensils, label: "Dining" }, { icon: Plane, label: "Travel" },
-  { icon: Car, label: "Transport" }, { icon: Shirt, label: "Shopping" }, { icon: Dumbbell, label: "Fitness" },
-  { icon: GraduationCap, label: "Education" }, { icon: Users, label: "Friends" }, { icon: Globe, label: "Internet" },
-  { icon: Bed, label: "Lodging" }, { icon: BookOpen, label: "Books" }, { icon: Wallet, label: "Wallet" },
-  { icon: Coffee, label: "Coffee" }, { icon: Leaf, label: "Green" }, { icon: PartyPopper, label: "Events" },
-  { icon: Key, label: "Rent" }, { icon: Wrench, label: "Repairs" }, { icon: HeartPulse, label: "Health" },
-  { icon: Gift, label: "Birthday" }, { icon: House, label: "Family" }, { icon: ShoppingCart, label: "Cart" },
-  { icon: CreditCard, label: "EMI" }, { icon: Utensils, label: "Food" }, { icon: Plane, label: "Holidays" },
-  { icon: Car, label: "Taxi" }, { icon: Shirt, label: "Gear" }, { icon: Dumbbell, label: "Gym" },
-  { icon: GraduationCap, label: "Course" }, { icon: Users, label: "Team" }, { icon: Globe, label: "World" },
-  { icon: Bed, label: "Stay" }, { icon: BookOpen, label: "School" }, { icon: Wallet, label: "Card" },
-  { icon: Coffee, label: "Snack" }, { icon: Leaf, label: "Eco" }, { icon: PartyPopper, label: "Fun" },
-  { icon: Key, label: "Key" }, { icon: Wrench, label: "Tools" },
+  { icon: Gift, label: "Gifts" }, 
+  { icon: House, label: "Bills" }, 
+  { icon: ShoppingCart, label: "Groceries" },
+  { icon: CreditCard, label: "Credit" }, 
+  { icon: Utensils, label: "Dining" }, 
+  { icon: Plane, label: "Travel" },
+  { icon: Car, label: "Transport" }, 
+  { icon: Shirt, label: "Shopping" }, 
+  { icon: Dumbbell, label: "Fitness" },
+  { icon: GraduationCap, label: "Education" }, 
+  { icon: Users, label: "Friends" }, 
+  { icon: Globe, label: "Internet" },
+  { icon: Bed, label: "Rent" }, 
+  { icon: BookOpen, label: "Books" }, 
+  { icon: Wallet, label: "Wallet" },
+  { icon: Coffee, label: "Coffee" }, 
+  { icon: Leaf, label: "Medical" }, 
+  { icon: PartyPopper, label: "Events" },
+  { icon: Key, label: "Home" }, 
+  { icon: Wrench, label: "Repairs" }
 ];
 
 export const FloatingBubbles = () => {
   return (
-    <div className="relative flex flex-col items-center w-full min-h-[340px] sm:min-h-[360px] md:min-h-[440px]">
-      {/* Headline behind the bubbles */}
-      <span className="packed-bubbles-headline select-none">
-        Money when you need it most
-      </span>
-      {/* Packed grid */}
-      <div className="packed-bubbles-grid relative z-10" style={{marginBottom: "20px"}}>
+    <div className="relative flex flex-col items-center w-full min-h-[500px] px-4 py-16">
+      {/* Centered title */}
+      <div className="text-center mb-12 relative z-10">
+        <h2 className="text-4xl md:text-5xl font-bold text-indigo-900 mb-4">
+          Money when you need it most
+        </h2>
+        <p className="text-lg text-indigo-700 font-medium">
+          We get your urgent expenses covered
+        </p>
+      </div>
+      
+      {/* Grid of icons */}
+      <div className="grid grid-cols-4 md:grid-cols-5 gap-6 max-w-4xl mx-auto">
         {icons.map(({ icon: Icon, label }, idx) => (
           <div
             key={label + idx}
-            className="bubble-grid-icon"
+            className="flex flex-col items-center justify-center p-4 bg-white/80 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             style={{
-              minWidth: 56,
-              minHeight: 62,
-              maxWidth: 70,
-              zIndex: 3,
-              margin: "1px",
-              animation: "fade-in-up 0.48s both",
-              animationDelay: `${idx * 25}ms`
+              animation: "fade-in-up 0.6s both",
+              animationDelay: `${idx * 50}ms`
             }}
           >
-            <Icon
-              size={32}
-              className="mx-auto text-indigo-600"
-              style={{
-                filter: "drop-shadow(0 1.5px 7px rgba(130,140,255,0.15))"
-              }}
-            />
-            <span className="bubble-grid-label">
+            <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mb-3">
+              <Icon size={24} className="text-indigo-600" />
+            </div>
+            <span className="text-sm font-medium text-gray-700 text-center">
               {label}
             </span>
           </div>

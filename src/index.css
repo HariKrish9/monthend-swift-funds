@@ -146,18 +146,14 @@ body {
   100% { background-position: 200% 0; }
 }
 
-@keyframes rotate-phones {
-  0%, 33% { 
-    transform: rotate(0deg) translateX(0px); 
-    z-index: 30; 
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  34%, 66% { 
-    transform: rotate(6deg) translateX(16px); 
-    z-index: 20; 
-  }
-  67%, 100% { 
-    transform: rotate(12deg) translateX(32px); 
-    z-index: 10; 
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
