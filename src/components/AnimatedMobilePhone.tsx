@@ -45,13 +45,19 @@ const AnimatedMobilePhone = () => {
           <div className="text-sm text-gray-600 mb-1 font-medium">Account Balance</div>
 
           {/* Animated Balance Display */}
-          <div className="flex flex-col items-center mb-3">
+          <div className="flex flex-col items-center mb-1">
             <div className="text-2xl font-bold text-indigo-900 flex items-center gap-1 leading-none">
               ₹{balance.toLocaleString()}
             </div>
           </div>
 
-          {/* Menu icons - compact in a single row */}
+          {/* +20,000 and label centered below balance */}
+          <div className="flex flex-col items-center mb-4">
+            <span className="text-2xl font-bold text-green-600 animate-pulse leading-none">+20,000</span>
+            <span className="text-sm text-green-600 mt-1 leading-none">added to account</span>
+          </div>
+
+          {/* Menu icons - compact in a single row near bottom */}
           <div className="flex flex-row justify-center items-end w-full gap-2 mt-auto mb-2">
             {menuOptions.map((option, idx) => {
               const Icon = option.icon;
@@ -63,12 +69,6 @@ const AnimatedMobilePhone = () => {
                 </div>
               );
             })}
-          </div>
-
-          {/* +20,000 below the icon row */}
-          <div className="flex flex-col items-center mt-2">
-            <span className="text-lg font-bold text-green-600 animate-pulse leading-none">+20,000</span>
-            <span className="text-xs text-green-600 mt-0.5 leading-none">added to account</span>
           </div>
         </div>
       </div>
