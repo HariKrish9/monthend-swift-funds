@@ -39,7 +39,7 @@ const Index = () => {
           <img
             src="/lovable-uploads/88a6e1b5-0555-47fb-9fa0-e26739f449e5.png"
             alt="MonthEnd Logo"
-            className="h-[7.14rem] w-auto md:h-[10.2rem] lg:h-[12.24rem] object-contain"
+            className="h-[8.5rem] w-auto md:h-[12.2rem] lg:h-[14.7rem] object-contain"
             style={{
               background: "none",
               boxShadow: "none",
