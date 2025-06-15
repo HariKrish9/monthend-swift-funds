@@ -63,7 +63,7 @@ const AnimatedMobilePhone = () => {
             </div>
             {/* +20,000 and label block */}
             <div className="flex flex-col items-center mb-4">
-              <span className="text-[1.425rem] font-bold text-green-600 animate-pulse leading-none">+20,000</span>
+              <span className="text-[1.25rem] font-bold text-green-600 animate-pulse leading-none">+20,000</span>
               <span className="text-sm text-green-600 mt-1 leading-none">added to your account</span>
             </div>
             {/* Menu icons - row clearly inside phone, not near edge */}
