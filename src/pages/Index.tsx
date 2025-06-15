@@ -11,6 +11,7 @@ import { WhyChooseSection } from "@/components/WhyChooseSection";
 import { PartnersSection } from "@/components/PartnersSection";
 import React from "react";
 import { HeroBackgroundAnimation } from "@/components/HeroBackgroundAnimation";
+import HeroAbstractMotion from "@/components/HeroAbstractMotion";
 
 const Index = () => {
   return (
@@ -42,7 +43,11 @@ const Index = () => {
           <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
         </div>
         
+        {/* HERO TEXT & NEW ABSTRACT MOTION */}
         <div className="relative z-10 text-center max-w-4xl px-4">
+          {/* --- MINIMAL ABSTRACT ANIMATION TOP --- */}
+          <HeroAbstractMotion />
+          {/* Main Heading and subheading */}
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 drop-shadow-lg animate-fade-in">
             MonthEnd
           </h1>
