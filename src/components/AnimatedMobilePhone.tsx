@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Home, Clock, CreditCard, Shield, Zap } from "lucide-react";
 
@@ -51,10 +52,10 @@ const AnimatedMobilePhone = () => {
             </div>
           </div>
 
-          {/* +20,000 and label */}
+          {/* +20,000 and label block */}
           <div className="flex flex-col items-center mb-4">
             <span className="text-2xl font-bold text-green-600 animate-pulse leading-none">+20,000</span>
-            <span className="text-sm text-green-600 mt-1 leading-none">added to account</span>
+            <span className="text-sm text-green-600 mt-1 leading-none">added to your account</span>
           </div>
 
           {/* Menu icons - row clearly inside phone, not near edge */}
