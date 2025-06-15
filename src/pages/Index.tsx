@@ -37,7 +37,7 @@ const Index = () => {
             pointer-events-none"
         >
           <img
-            src="/lovable-uploads/8301cfd9-89ae-413c-92be-c6bc962adaf2.png"
+            src="/lovable-uploads/88a6e1b5-0555-47fb-9fa0-e26739f449e5.png"
             alt="MonthEnd Logo"
             className="h-28 w-auto md:h-40 lg:h-48 object-contain"
             style={{
