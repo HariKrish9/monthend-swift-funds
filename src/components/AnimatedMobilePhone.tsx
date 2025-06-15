@@ -58,17 +58,24 @@ const AnimatedMobilePhone = () => {
           </div>
 
           {/* Menu icons - row clearly inside phone, not near edge */}
-          <div className="flex flex-row justify-center items-end w-full gap-3 mt-auto mb-8">
+          <div className="flex flex-row justify-center items-end w-full gap-3 mt-auto mb-4">
             {menuOptions.map((option, idx) => {
               const Icon = option.icon;
               return (
                 <div key={idx} className="flex items-center justify-center flex-1">
-                  <div className="bg-white/80 dark:bg-white/10 rounded-md p-1.5 shadow group-hover:scale-105 transition-transform">
-                    <Icon className="w-6 h-6 text-indigo-700" />
+                  <div className="bg-white/80 dark:bg-white/10 rounded-md p-1 shadow group-hover:scale-105 transition-transform">
+                    <Icon className="w-5 h-5 text-indigo-700" />
                   </div>
                 </div>
               );
             })}
+          </div>
+
+          {/* Supporting text below icons */}
+          <div className="w-full text-center px-2 mt-1">
+            <span className="text-xs text-indigo-700 font-medium">
+              We get your urgent expenses covered.
+            </span>
           </div>
         </div>
       </div>
