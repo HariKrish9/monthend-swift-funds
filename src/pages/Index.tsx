@@ -45,7 +45,7 @@ const Index = () => {
           <HeroAbstractMotion />
           {/* Tagline only */}
           <h2 className="text-2xl md:text-4xl font-medium mb-8 animate-fade-in-delay-100 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-            Beat month-end money stress. Instant loans for salaried professionals with monthend
+            Beat month-end money stress with month end.
           </h2>
           {/* Get Started button */}
           <a
@@ -92,8 +92,14 @@ const Index = () => {
             Middle class salaried professionals are struggling to bridge the gap at the end of the month. We're here to help.
           </p>
         </div>
-        <div className="w-full md:w-5/12 flex justify-center animate-slide-in-right">
+        <div className="w-full md:w-5/12 flex justify-center animate-slide-in-right flex-col items-center">
           <RevolvingMobileWidgets />
+          {/* Supporting text under Repairs icon */}
+          <div className="w-full flex justify-center">
+            <span className="text-indigo-700 font-medium text-base mt-2 block text-center">
+              We get your urgent expenses covered
+            </span>
+          </div>
         </div>
       </section>
 
