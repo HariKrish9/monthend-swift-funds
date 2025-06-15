@@ -25,14 +25,14 @@ const Index = () => {
       <section className="w-full min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-indigo-700 via-indigo-800 to-blue-900 text-white relative py-16">
         <HeroBackgroundAnimation />
 
-        {/* Big Logo - Top left, NO bg, border, or outline, 10% from top */}
+        {/* Big Logo - Top left, NO bg, border, or outline, 5% from top */}
         <div
           className="
             absolute z-30 
             left-2
-            top-0
-            md:left-6 md:top-0
-            lg:left-10 lg:top-0
+            top-[5vh]
+            md:left-6 md:top-[5vh]
+            lg:left-10 lg:top-[5vh]
             flex items-center
             pointer-events-none"
         >
