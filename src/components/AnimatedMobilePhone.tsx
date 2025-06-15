@@ -71,12 +71,7 @@ const AnimatedMobilePhone = () => {
             })}
           </div>
 
-          {/* Supporting text below icons */}
-          <div className="w-full text-center px-2 mt-1">
-            <span className="text-xs text-indigo-700 font-medium">
-              We get your urgent expenses covered.
-            </span>
-          </div>
+          {/* Removed: Supporting text below icons */}
         </div>
       </div>
     </div>
