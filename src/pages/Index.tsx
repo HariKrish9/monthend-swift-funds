@@ -3,10 +3,15 @@ import { HowItWorks } from "@/components/HowItWorks";
 import { Benefits } from "@/components/Benefits";
 import { LoanCalculator } from "@/components/LoanCalculator";
 import { PreSignupForm } from "@/components/PreSignupForm";
+import { MobileWidgets } from "@/components/MobileWidgets";
+import { FloatingBubbles } from "@/components/FloatingBubbles";
+import { AbstractShapes } from "@/components/AbstractShapes";
 
 const Index = () => {
   return (
-    <main className="bg-gradient-to-b from-indigo-50 via-white to-blue-100 min-h-screen px-0 overflow-x-hidden">
+    <main className="bg-gradient-to-b from-indigo-50 via-white to-blue-100 min-h-screen px-0 overflow-x-hidden relative">
+      <AbstractShapes />
+      
       {/* Hero Section */}
       <section className="w-full flex flex-col items-center py-20 bg-gradient-to-br from-indigo-700 via-indigo-800 to-blue-900 text-white shadow-2xl relative overflow-hidden">
         {/* Background animation elements */}
@@ -35,7 +40,24 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Problem Statement */}
+      {/* Money When You Need It Most Section */}
+      <section className="w-full py-20 flex flex-col items-center bg-gradient-to-b from-white to-indigo-50 relative">
+        <div className="text-center mb-12 relative z-10">
+          <h3 className="text-4xl md:text-5xl font-bold text-indigo-900 mb-4 animate-fade-in">
+            Money when you need it most
+          </h3>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto animate-fade-in-delay-100">
+            From unexpected bills to essential purchases, we've got you covered
+          </p>
+        </div>
+        
+        {/* Floating bubbles container */}
+        <div className="relative w-full max-w-4xl h-80 mb-16">
+          <FloatingBubbles />
+        </div>
+      </section>
+
+      {/* Problem Statement with Mobile Widgets */}
       <section className="w-full py-16 flex flex-col md:flex-row gap-12 justify-center items-center bg-white px-4">
         <div className="max-w-xl animate-slide-in-left">
           <h3 className="text-3xl md:text-4xl font-bold mb-6 text-indigo-900 leading-tight">
@@ -60,15 +82,7 @@ const Index = () => {
           </p>
         </div>
         <div className="w-full md:w-5/12 flex justify-center animate-slide-in-right">
-          <div className="relative group">
-            <img
-              src="https://images.unsplash.com/photo-1523287562758-66c7fc58967f?auto=format&fit=crop&w=720&q=80"
-              alt="Financial stress illustration"
-              className="rounded-2xl shadow-2xl w-80 md:w-96 hover-lift"
-              loading="lazy"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/20 to-transparent rounded-2xl group-hover:from-indigo-900/30 transition-all duration-300"></div>
-          </div>
+          <MobileWidgets />
         </div>
       </section>
 

@@ -85,7 +85,7 @@ export const LoanCalculator: React.FC = () => {
               </li>
               <li className="flex justify-between items-center py-2 border-b border-indigo-200">
                 <span className="font-semibold text-gray-700">Interest @2%/mo:</span>
-                <span className="font-bold text-lg text-orange-600">{formatINR(interest)}</span>
+                <span className="font-bold text-lg text-indigo-700">{formatINR(interest)}</span>
               </li>
               <li className="flex justify-between items-center py-2 border-b border-indigo-200">
                 <span className="font-semibold text-gray-700">Repayment date:</span>
