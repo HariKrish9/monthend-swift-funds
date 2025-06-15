@@ -1,3 +1,4 @@
+
 import { HowItWorks } from "@/components/HowItWorks";
 import { Benefits } from "@/components/Benefits";
 import { LoanCalculator } from "@/components/LoanCalculator";
@@ -10,7 +11,7 @@ const Index = () => {
   return (
     <main className="bg-gradient-to-b from-indigo-50 via-white to-blue-100 min-h-screen px-0 overflow-x-hidden relative">
       <AbstractShapes />
-      
+
       {/* Hero Section */}
       <section className="w-full flex flex-col items-center py-20 bg-gradient-to-br from-indigo-700 via-indigo-800 to-blue-900 text-white shadow-2xl relative overflow-hidden">
         {/* Background animation elements */}
@@ -40,19 +41,19 @@ const Index = () => {
       </section>
 
       {/* Money When You Need It Most Section */}
-      <section className="w-full py-20 relative">
-        <div className="text-center mb-4 relative z-10 px-4">
-          <h3 className="text-4xl md:text-5xl font-bold text-indigo-900 mb-4 animate-fade-in">
-            Money when you need it most
-          </h3>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto animate-fade-in-delay-100">
-            From unexpected bills to essential purchases, we've got you covered
-          </p>
-        </div>
-        
-        {/* Floating bubbles container */}
-        <div className="relative w-full max-w-6xl h-[650px] mx-auto -mt-8">
-          <FloatingBubbles />
+      <section className="w-full py-20 relative flex items-center justify-center min-h-[580px] md:min-h-[700px] bg-[linear-gradient(180deg,#f5f7ff_60%,#eef4ff_100%)] overflow-x-hidden">
+        <div className="absolute left-0 right-0 top-1 mx-auto w-full h-[145px] pointer-events-none select-none z-0" aria-hidden></div>
+        <div className="relative w-full max-w-6xl mx-auto flex flex-col items-center justify-center">
+          {/* Bubble headline will be rendered in FloatingBubbles as glass-text background */}
+          <div style={{ width: "100%", maxWidth: 700 }} className="flex flex-col items-center justify-center">
+            <FloatingBubbles />
+          </div>
+          {/* Subtitle under the grid */}
+          <div className="relative z-20 mt-2 md:mt-6 text-center flex flex-col items-center w-full max-w-xl">
+            <p className="text-indigo-900/90 text-base md:text-lg font-semibold drop-shadow-sm animate-fade-in">
+              From groceries to gadgets, bills to gifts — MonthEnd covers your urgent expenses, so you can breathe easy till payday.
+            </p>
+          </div>
         </div>
       </section>
 
