@@ -1,4 +1,3 @@
-
 import { HowItWorks } from "@/components/HowItWorks";
 import { Benefits } from "@/components/Benefits";
 import { PreSignupForm } from "@/components/PreSignupForm";
@@ -26,21 +25,21 @@ const Index = () => {
       <section className="w-full min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-indigo-700 via-indigo-800 to-blue-900 text-white relative py-16">
         <HeroBackgroundAnimation />
 
-        {/* Big Logo - Top left, NO bg, border, or outline, 5vh from top */}
+        {/* Big Logo - Top left, NO bg, border, or outline, 10% from top */}
         <div
           className="
             absolute z-30 
             left-2
-            top-[5vh]
-            md:left-6
-            lg:left-10
+            top-0
+            md:left-6 md:top-0
+            lg:left-10 lg:top-0
             flex items-center
             pointer-events-none"
         >
           <img
-            src="/lovable-uploads/802de606-c8a9-4aa1-aaa4-0eb5d9e1950e.png"
+            src="/lovable-uploads/88a6e1b5-0555-47fb-9fa0-e26739f449e5.png"
             alt="MonthEnd Logo"
-            className="h-[8.5rem] w-auto md:h-[12.2rem] lg:h-[14.7rem] object-contain mix-blend-lighten"
+            className="h-[8.5rem] w-auto md:h-[12.2rem] lg:h-[14.7rem] object-contain"
             style={{
               background: "none",
               boxShadow: "none",
