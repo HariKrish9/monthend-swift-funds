@@ -30,9 +30,9 @@ const Index = () => {
           className="
             absolute z-30 
             left-2
-            top-[10vh]
-            md:left-6 md:top-[10vh]
-            lg:left-10 lg:top-[10vh]
+            top-0
+            md:left-6 md:top-0
+            lg:left-10 lg:top-0
             flex items-center
             pointer-events-none"
         >
