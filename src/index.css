@@ -173,25 +173,6 @@ body {
   transform: scale(1.09) translateY(-5px);
 }
 
-/* Responsive, packed grid for bubbles */
-.packed-bubbles-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 0.36rem;
-  width: 100%;
-  max-width: 660px;
-  justify-content: center;
-}
-@media (min-width: 540px) {
-  .packed-bubbles-grid { grid-template-columns: repeat(8, 1fr); max-width: 740px;}
-}
-@media (min-width: 900px) {
-  .packed-bubbles-grid { grid-template-columns: repeat(10, 1fr); max-width: 900px;}
-}
-@media (max-width: 439px) {
-  .packed-bubbles-grid { grid-template-columns: repeat(5, 1fr); max-width: 99vw;}
-}
-
 /* Packed headline behind the bubble grid */
 .packed-bubbles-headline {
   position: absolute;
@@ -217,7 +198,29 @@ body {
   .packed-bubbles-grid { max-width: 99vw; }
 }
 
-/* Fix for body - overflow/scroll smoothness */
+/* Responsive, packed grid for bubbles */
+.packed-bubbles-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.36rem;
+  width: 100%;
+  max-width: 660px;
+  justify-content: center;
+  margin-top: 96px; /* separate from headline */
+  position: relative;
+  z-index: 2;
+}
+@media (min-width: 540px) {
+  .packed-bubbles-grid { grid-template-columns: repeat(8, 1fr); max-width: 740px;}
+}
+@media (min-width: 900px) {
+  .packed-bubbles-grid { grid-template-columns: repeat(10, 1fr); max-width: 900px;}
+}
+@media (max-width: 439px) {
+  .packed-bubbles-grid { grid-template-columns: repeat(5, 1fr); max-width: 99vw;}
+}
+
+/* Fix for body - overflow/scroll smoothness. Remove or correct double negative/invalid properties. */
 html, body {
   height: 100%;
   overflow-x: hidden;
@@ -227,18 +230,18 @@ html, body {
 body {
   min-height: 100vh;
   background-color: #fff;
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior-y: none;
+  /* Remove conflicting overscroll-behavior. */
+  /*-webkit-overflow-scrolling: touch;*/
+  /* overscroll-behavior-y: none; */
 }
 
-/* Extra abstracts for fintech look */
+/* Abstract styles updated for correct Tailwind-like opacity syntax. */
 .extra-abstract {
   position: absolute;
   z-index: -30;
   pointer-events: none;
   opacity: 0.12;
 }
-/* Example gradient swoosh */
 .gradient-swoosh {
   background: linear-gradient(99deg, #818cf8 0%, #6366f1 67%, #c7d2fe 100%);
   opacity: 0.19;
@@ -256,7 +259,7 @@ body {
   filter: blur(9px);
 }
 .widget-glossy {
-  background: linear-gradient(115deg,rgba(255,255,255,0.93) 67%, #dbeafe 100%);
+  background: linear-gradient(115deg,rgba(255,255,255,0.90) 67%, #dbeafe 100%);
   border: 1px solid rgba(139,92,246,0.10);
   border-radius: 1.1rem;
   box-shadow: 0 2px 17px 0 rgba(97,97,255,0.10),0 1px 2px 0 rgba(80,120,250,0.03);
@@ -266,6 +269,9 @@ body {
 .widget-glossy:hover {
   box-shadow: 0 5px 15px 0 rgba(99,102,241,0.13);
 }
+
+/* Use Tailwind's arbitrary opacity rather than custom classes like opacity-14 or opacity-12. 
+   Instead, use Tailwind's opacity-[.14] (in className) in JSX. Remove those non-Tailwind classes here. */
 
 @media (max-width: 520px) {
   .widget-glossy { padding: 0.8rem 1.1rem !important; }

@@ -1,11 +1,11 @@
 
 import React from "react";
 
-// FI and Slice-inspired: extra gradients + subtle shapes
+// Extra fintech-inspired abstracts, all with valid Tailwind classes + some inline adjustments
 export const AbstractShapes = () => {
   return (
     <>
-      {/* Soft radial dot grid - FI inspired */}
+      {/* Soft radial dot grid */}
       <div
         className="absolute inset-0 w-full h-full pointer-events-none opacity-[0.04] -z-40"
         style={{
@@ -14,11 +14,11 @@ export const AbstractShapes = () => {
           backgroundSize: "2.2rem 2.2rem",
         }}
       />
-      {/* Gradient swoosh overlays */}
+      {/* Main swooshes */}
       <div className="extra-abstract gradient-swoosh" style={{top: "11vw", left: "8vw"}}/>
       <div className="extra-abstract swoosh2" style={{top: "59vh", right: "19vw"}}/>
-      {/* Minimal slice-inspired top right & bottom left */}
-      <div className="absolute -top-24 -right-24 w-[28vw] h-[23vw] max-w-xl max-h-72 opacity-14 -z-30 transform-gpu">
+      {/* Top right swoop (gradient, with Tailwind opacity) */}
+      <div className="absolute -top-24 -right-24 w-[28vw] h-[23vw] max-w-xl max-h-72 opacity-[0.14] -z-30 transform-gpu">
         <svg viewBox="0 0 200 200" className="w-full h-full animate-float">
           <path
             d="M 0 200 Q 100 100, 200 200 L 200 0 L 0 0 Z"
@@ -32,7 +32,8 @@ export const AbstractShapes = () => {
           </defs>
         </svg>
       </div>
-      <div className="absolute -bottom-24 -left-24 w-[29vw] h-[25vw] max-w-xl max-h-72 opacity-12 -z-30 transform-gpu rotate-180">
+      {/* Bottom left abstract */}
+      <div className="absolute -bottom-24 -left-24 w-[29vw] h-[25vw] max-w-xl max-h-72 opacity-[0.12] -z-30 transform-gpu rotate-180">
         <svg viewBox="0 0 200 200" className="w-full h-full animate-float" style={{ animationDelay: "1.2s" }}>
           <path
             d="M 0 200 Q 100 100, 200 200 L 200 0 L 0 0 Z"
@@ -55,6 +56,9 @@ export const AbstractShapes = () => {
       <div className="absolute bottom-[9vw] left-1/2 w-16 h-16 bg-indigo-300/40 rounded-full blur-lg -z-30"/>
       {/* Minimal stripe */}
       <div className="absolute top-[15vw] left-0 right-0 mx-auto w-[16vw] h-1 bg-gradient-to-r from-indigo-200/0 via-indigo-100/65 to-indigo-300/0 blur-[2px] opacity-30 -z-20"/>
+      {/* New fintech-inspired floating pills/shapes */}
+      <div className="absolute left-[17vw] top-[22vh] w-[50vw] h-4 rounded-full bg-gradient-to-r from-indigo-100/60 via-blue-100/30 to-white/0 blur-md opacity-30 -z-10"/>
+      <div className="absolute right-[10vw] bottom-[33vh] w-[32vw] h-8 rounded-full bg-gradient-to-l from-blue-100/45 via-blue-200/15 to-indigo-200/20 blur-lg opacity-20 -z-10"/>
     </>
   );
 };

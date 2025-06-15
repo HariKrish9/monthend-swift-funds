@@ -4,7 +4,7 @@ import {
   Gift, FileText, House, ShoppingCart, Smartphone, Utensils, Plane, Car, Shirt, Dumbbell, GraduationCap, PawPrint, Wrench, PartyPopper, Wifi, Fuel, Tv, Baby, BookOpen, HeartPulse, Receipt, Ticket, Coffee, Film, Pizza, Gamepad2, Music, Laptop, HandCoins, Store, Lightbulb, Key, Wallet, Globe, Bed, Briefcase, Leaf, CreditCard, FlaskConical, Soup, Users, Cloud, Shield
 } from "lucide-react";
 
-// 40+ glossy-looking icons, all unique to avoid duplicates
+// 40+ glossy unique icons
 const icons = [
   { icon: Gift, label: "Gifts" },
   { icon: FileText, label: "Bills" },
@@ -53,22 +53,23 @@ const icons = [
 
 export const FloatingBubbles = () => {
   return (
-    <div className="relative flex justify-center items-center w-full min-h-[340px] sm:min-h-[360px] md:min-h-[420px]">
-      {/* Headline is BEHIND the bubbles */}
+    <div className="relative flex flex-col items-center w-full min-h-[340px] sm:min-h-[360px] md:min-h-[440px]">
       <span className="packed-bubbles-headline select-none">
         Money when you need it most
       </span>
-      <div className="packed-bubbles-grid relative z-10" style={{ marginTop: "90px", marginBottom: "20px" }}>
+      <div className="packed-bubbles-grid relative z-10" style={{marginBottom: "20px"}}>
         {icons.map(({ icon: Icon, label }, idx) => (
           <div
-            key={label}
+            key={label + idx}
             className="bubble-glossy flex flex-col items-center justify-center rounded-2xl py-2 px-1 transition-transform"
             style={{
               minWidth: 47,
               minHeight: 47,
-              maxWidth: 60,
+              maxWidth: 62,
               zIndex: 3,
               margin: "1px",
+              animation: "fade-in-up 0.48s both",
+              animationDelay: `${idx * 33}ms`
             }}
           >
             <Icon
@@ -76,7 +77,7 @@ export const FloatingBubbles = () => {
               className="mb-1 text-indigo-600"
               style={{
                 filter:
-                  "drop-shadow(0 1.5px 7px rgba(130,140,255,0.30)) drop-shadow(0 0px 1px white)",
+                  "drop-shadow(0 1.5px 7px rgba(130,140,255,0.30)) drop-shadow(0 0px 1px white)"
               }}
             />
             <span className="text-[0.71rem] leading-none font-medium text-indigo-900/80 mt-1 opacity-90">
