@@ -14,6 +14,7 @@ import { HeroBackgroundAnimation } from "@/components/HeroBackgroundAnimation";
 import HeroAbstractMotion from "@/components/HeroAbstractMotion";
 import HeroMenuOptions from "@/components/HeroMenuOptions";
 
+// Move the logo larger and 10% above phone, with no background
 const Index = () => {
   return (
     <main className="bg-gradient-to-b from-indigo-50 via-white to-blue-100 relative">
@@ -23,18 +24,32 @@ const Index = () => {
       {/* Hero Section - Fi.money style */}
       <section className="w-full min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-indigo-700 via-indigo-800 to-blue-900 text-white relative py-16">
         <HeroBackgroundAnimation />
-        {/* MonthEnd Logo - BIG, NO BACKGROUND */}
-        <div className="absolute top-4 left-4 z-20">
+        {/* Big Logo, absolutely positioned about 10% above phone */}
+        <div
+          className="absolute left-1/2 z-30 flex flex-col items-center"
+          style={{
+            top: "10%",
+            transform: "translateX(-50%)",
+            pointerEvents: "none",
+          }}
+        >
           <img
             src="/lovable-uploads/88a6e1b5-0555-47fb-9fa0-e26739f449e5.png"
             alt="MonthEnd Logo"
-            className="h-32 w-auto object-contain"
-            style={{ background: "none", boxShadow: "none", borderRadius: "0", padding: 0, filter: 'drop-shadow(0 4px 16px rgba(80, 90, 255, 0.10))' }}
+            className="h-40 w-auto object-contain"
+            style={{
+              background: "none",
+              boxShadow: "none",
+              borderRadius: "0",
+              padding: 0,
+              filter: 'drop-shadow(0 8px 32px rgba(80,90,255,0.10))',
+            }}
+            draggable={false}
           />
         </div>
 
         {/* Animated Mobile Phone FRONT AND CENTER */}
-        <div className="relative z-20 flex flex-col items-center w-full max-w-lg">
+        <div className="relative z-20 flex flex-col items-center w-full max-w-lg mt-24">
           <AnimatedMobilePhone />
         </div>
 
