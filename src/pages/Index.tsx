@@ -23,12 +23,15 @@ const Index = () => {
         <HeroBackgroundAnimation />
         
         {/* MonthEnd Logo */}
-        <div className="absolute top-8 left-8 z-20">
-          <img 
-            src="/lovable-uploads/8e04e3b3-f5e6-4f27-96ab-acc6b9b6682b.png" 
-            alt="MonthEnd Logo" 
-            className="h-12 w-auto"
-          />
+        <div className="absolute top-6 left-6 z-20">
+          <div className="backdrop-blur-md bg-white/10 rounded-xl shadow-lg shadow-black/10 p-2 flex items-center">
+            <img
+              src="/lovable-uploads/8e04e3b3-f5e6-4f27-96ab-acc6b9b6682b.png"
+              alt="MonthEnd Logo"
+              className="h-10 w-auto object-contain"
+              style={{ filter: 'drop-shadow(0 2px 12px rgba(80, 90, 255, 0.13))' }}
+            />
+          </div>
         </div>
         
         <AnimatedMobilePhone />
