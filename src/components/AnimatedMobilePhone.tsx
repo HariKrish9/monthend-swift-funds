@@ -38,14 +38,17 @@ const AnimatedMobilePhone = () => {
       {/* iPhone-like wrapper */}
       <div className="relative flex flex-col items-center">
         {/* iPhone notch */}
-        <div className="absolute left-1/2 -translate-x-1/2 top-2 w-20 h-2.5 bg-black/70 rounded-b-xl z-20" style={{ boxShadow: "0 0 8px 2px rgba(0,0,0,0.12)" }} />
+        <div
+          className="absolute left-1/2 -translate-x-1/2 top-2 w-[72px] h-2.5 bg-black/70 rounded-b-xl z-20" // w-20 (80px) -> w-[72px] (10% smaller)
+          style={{ boxShadow: "0 0 8px 2px rgba(0,0,0,0.12)" }}
+        />
         {/* Phone outer shell */}
-        <div className="w-[250px] h-[429px] bg-gradient-to-b from-gray-200 via-white to-gray-100
+        <div className="w-[225px] h-[386px] bg-gradient-to-b from-gray-200 via-white to-gray-100
             rounded-[2.6rem] border-[6px] border-gray-400 shadow-2xl overflow-hidden
             flex flex-col items-center justify-center z-10 relative"
         >
           {/* Simulated iPhone inner screen, inset for bezel */}
-          <div className="w-[225px] h-[403px] bg-white rounded-[2.1rem] shadow-inner flex flex-col items-center justify-center px-0 pt-2 pb-2 relative">
+          <div className="w-[202px] h-[362px] bg-white rounded-[2.1rem] shadow-inner flex flex-col items-center justify-center px-0 pt-2 pb-2 relative">
             {/* Logo/icon - moderate size */}
             <div className="flex items-center justify-center mt-3 mb-3">
               <CreditCard className="w-16 h-16 text-indigo-700 drop-shadow-md" />
@@ -78,7 +81,7 @@ const AnimatedMobilePhone = () => {
             </div>
           </div> {/* End inner screen */}
           {/* iPhone Home Indicator (bottom bar) */}
-          <div className="absolute left-1/2 -translate-x-1/2 bottom-4 w-16 h-1 rounded-full bg-gray-400/50" />
+          <div className="absolute left-1/2 -translate-x-1/2 bottom-4 w-[58px] h-1 rounded-full bg-gray-400/50" /> {/* w-16 (64px) -> w-[58px] */}
         </div>
       </div>
     </div>
