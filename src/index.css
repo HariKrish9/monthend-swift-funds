@@ -164,13 +164,13 @@ body {
 .bubble-glossy {
   background: linear-gradient(120deg, rgba(255,255,255,0.90) 72%, rgba(240,240,255,0.85) 100%);
   box-shadow: 0 4px 32px 0 rgba(99,102,241,0.08), 0 1.5px 8px 0 rgba(99,102,241,0.13);
-  backdrop-filter: blur(10px) saturate(175%);
+  backdrop-filter: blur(9px) saturate(160%);
   border: 1.5px solid rgba(128,139,255,0.17);
   transition: box-shadow 0.2s, transform 0.2s;
 }
 .bubble-glossy:hover {
-  box-shadow: 0 8px 36px 0 rgba(99,102,241,0.21);
-  transform: scale(1.09) translateY(-5px);
+  box-shadow: 0 8px 36px 0 rgba(99,102,241,0.18);
+  transform: scale(1.06) translateY(-4px);
 }
 
 /* Packed headline behind the bubble grid */
@@ -181,7 +181,7 @@ body {
   top: 48px;
   text-align: center;
   font-weight: 900;
-  opacity: 0.24;
+  opacity: 0.22;
   pointer-events: none;
   z-index: 0;
   letter-spacing: 0.02em;
@@ -230,7 +230,7 @@ html, body {
 body {
   min-height: 100vh;
   background-color: #fff;
-  /* Remove conflicting overscroll-behavior. */
+  /* Remove conflicting overscroll-behavior and other buggy lines */
   /*-webkit-overflow-scrolling: touch;*/
   /* overscroll-behavior-y: none; */
 }
