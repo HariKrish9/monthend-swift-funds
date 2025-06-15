@@ -42,7 +42,7 @@ const Index = () => {
 
       {/* Money When You Need It Most Section */}
       <section className="w-full py-20 flex flex-col items-center bg-gradient-to-b from-white to-indigo-50 relative">
-        <div className="text-center mb-12 relative z-10">
+        <div className="text-center mb-12 relative z-10 px-4">
           <h3 className="text-4xl md:text-5xl font-bold text-indigo-900 mb-4 animate-fade-in">
             Money when you need it most
           </h3>
@@ -52,7 +52,7 @@ const Index = () => {
         </div>
         
         {/* Floating bubbles container */}
-        <div className="relative w-full max-w-4xl h-80 mb-16">
+        <div className="relative w-full max-w-5xl h-[600px] mb-16">
           <FloatingBubbles />
         </div>
       </section>

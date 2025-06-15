@@ -1,27 +1,60 @@
 
-import React from 'react';
-import { Gift, FileText, House, Cross, ShoppingCart, Smartphone } from 'lucide-react';
+import React, { useMemo } from 'react';
+import { 
+  Gift, FileText, House, Cross, ShoppingCart, Smartphone, 
+  Utensils, Plane, Car, Shirt, Dumbbell, GraduationCap, 
+  PawPrint, Wrench, PartyPopper, Wifi, Fuel, Tv, Baby, BookOpen, HeartPulse 
+} from 'lucide-react';
 
-const bubbles = [
-  { icon: Gift, label: 'Gifts', delay: '0s', position: 'top-10 left-10' },
-  { icon: FileText, label: 'Bills', delay: '0.5s', position: 'top-20 right-16' },
-  { icon: House, label: 'Household', delay: '1s', position: 'top-32 left-20' },
-  { icon: Cross, label: 'Medical', delay: '1.5s', position: 'bottom-32 right-10' },
-  { icon: ShoppingCart, label: 'Groceries', delay: '2s', position: 'bottom-20 left-16' },
-  { icon: Smartphone, label: 'Gadgets', delay: '2.5s', position: 'bottom-10 right-20' }
+const bubbleData = [
+  { icon: Gift, label: 'Gifts' },
+  { icon: FileText, label: 'Bills' },
+  { icon: House, label: 'Household' },
+  { icon: Cross, label: 'Medical' },
+  { icon: ShoppingCart, label: 'Groceries' },
+  { icon: Smartphone, label: 'Gadgets' },
+  { icon: Utensils, label: 'Dining Out' },
+  { icon: Plane, label: 'Travel' },
+  { icon: Car, label: 'Transport' },
+  { icon: Shirt, label: 'Shopping' },
+  { icon: Dumbbell, label: 'Fitness' },
+  { icon: GraduationCap, label: 'Education' },
+  { icon: PawPrint, label: 'Pets' },
+  { icon: Wrench, label: 'Repairs' },
+  { icon: PartyPopper, label: 'Events' },
+  { icon: Wifi, label: 'Internet' },
+  { icon: Fuel, label: 'Gas' },
+  { icon: Tv, label: 'Streaming' },
+  { icon: Baby, label: 'Childcare' },
+  { icon: BookOpen, label: 'Books' },
+  { icon: HeartPulse, label: 'Health' },
 ];
 
 export const FloatingBubbles = () => {
+  const bubbles = useMemo(() => {
+    return bubbleData.map((item, index) => ({
+      ...item,
+      id: index,
+      style: {
+        top: `${Math.random() * 85}%`,
+        left: `${Math.random() * 85}%`,
+        animationDelay: `${Math.random() * 5}s`,
+        animationDuration: `${Math.random() * 3 + 4}s`,
+        transform: `scale(${Math.random() * 0.3 + 0.8})`,
+      },
+    }));
+  }, []);
+
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {bubbles.map((bubble, index) => (
+    <div className="absolute inset-0 overflow-visible pointer-events-none">
+      {bubbles.map((bubble) => (
         <div
-          key={index}
-          className={`absolute ${bubble.position} animate-bounce-subtle opacity-80`}
-          style={{ animationDelay: bubble.delay, animationDuration: '3s' }}
+          key={bubble.id}
+          className="absolute animate-bounce-subtle opacity-80"
+          style={bubble.style}
         >
-          <div className="bg-white/90 backdrop-blur-sm rounded-full p-4 shadow-lg border border-indigo-100 hover:scale-110 transition-transform duration-300">
-            <bubble.icon size={24} className="text-indigo-600 mb-1" />
+          <div className="bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-lg border border-indigo-100 hover:scale-110 transition-transform duration-300 flex flex-col items-center w-24 h-24 justify-center">
+            <bubble.icon size={28} className="text-indigo-600 mb-1" />
             <div className="text-xs font-medium text-indigo-800 text-center">{bubble.label}</div>
           </div>
         </div>
