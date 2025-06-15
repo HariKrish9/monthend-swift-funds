@@ -1,3 +1,4 @@
+
 import { HowItWorks } from "@/components/HowItWorks";
 import { Benefits } from "@/components/Benefits";
 import { PreSignupForm } from "@/components/PreSignupForm";
@@ -27,7 +28,7 @@ const Index = () => {
         <div className="absolute top-6 left-6 z-20">
           <div className="backdrop-blur-md bg-white/10 rounded-xl shadow-lg shadow-black/10 p-3 flex items-center">
             <img
-              src="/lovable-uploads/8e04e3b3-f5e6-4f27-96ab-acc6b9b6682b.png"
+              src="/lovable-uploads/88a6e1b5-0555-47fb-9fa0-e26739f449e5.png"
               alt="MonthEnd Logo"
               className="h-16 w-auto object-contain"
               style={{ filter: 'drop-shadow(0 2px 12px rgba(80, 90, 255, 0.13))' }}
@@ -161,3 +162,4 @@ const Index = () => {
 };
 
 export default Index;
+
