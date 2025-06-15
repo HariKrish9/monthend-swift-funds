@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -105,12 +106,32 @@
 /* Smooth scrolling and overflow fix for better UX */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   min-height: 100vh;
   overscroll-behavior-y: none;
   overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Remove default scrollbar styling for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
 }
 
 /* Custom animations inspired by modern fintech apps */
@@ -205,105 +226,56 @@ body {
   50% { transform: translateY(-10px); }
 }
 
-/* --------- BUBBLE/GRID STYLE --------- */
-/* Neutral, non-glossy look for icon grid */
-.bubble-grid-icon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 1.2rem;
-  padding: 0.6rem 0.25rem;
-  background: #f3f4f6; /* minimal soft shade */
-  box-shadow: 0 2px 8px 0 rgba(99,102,241,0.07);
-  transition: box-shadow 0.19s, transform 0.16s;
-  border: none;
+.animate-fade-in {
+  animation: fade-in-up 0.8s ease-out forwards;
 }
 
-.bubble-grid-icon:hover {
-  box-shadow: 0 4px 16px 0 rgba(99,102,241,0.11);
-  transform: scale(1.04) translateY(-2px);
+.animate-fade-in-delay-100 {
+  animation: fade-in-up 0.8s ease-out 0.1s forwards;
+  opacity: 0;
 }
 
-/* Center label inside icon */
-.bubble-grid-label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: #312e81;
-  opacity: 0.98;
-  margin-top: 0.37rem;
-  margin-bottom: 0.1rem;
-  height: 1.4rem;
-  width: 100%;
-  text-align: center;
+.animate-fade-in-delay-200 {
+  animation: fade-in-up 0.8s ease-out 0.2s forwards;
+  opacity: 0;
 }
 
-/* -------------- packed grid unchanged --------------- */
-.packed-bubbles-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 0.36rem;
-  width: 100%;
-  max-width: 660px;
-  justify-content: center;
-  margin-top: 96px;
-  position: relative;
-  z-index: 2;
-}
-@media (min-width: 540px) {
-  .packed-bubbles-grid { grid-template-columns: repeat(8, 1fr); max-width: 740px;}
-}
-@media (min-width: 900px) {
-  .packed-bubbles-grid { grid-template-columns: repeat(10, 1fr); max-width: 900px;}
-}
-@media (max-width: 439px) {
-  .packed-bubbles-grid { grid-template-columns: repeat(5, 1fr); max-width: 99vw;}
+.animate-fade-in-delay-300 {
+  animation: fade-in-up 0.8s ease-out 0.3s forwards;
+  opacity: 0;
 }
 
-/* Abstract styles updated for correct Tailwind-like opacity syntax. */
-.extra-abstract {
-  position: absolute;
-  z-index: -30;
-  pointer-events: none;
-  opacity: 0.12;
-}
-.gradient-swoosh {
-  background: linear-gradient(99deg, #818cf8 0%, #6366f1 67%, #c7d2fe 100%);
-  opacity: 0.19;
-  width: 19vw;
-  height: 12vw;
-  border-radius: 99vw;
-  filter: blur(14px);
-}
-.swoosh2 {
-  background: linear-gradient(90deg, #22d3ee 0%, #f5d0fe 100%);
-  opacity: 0.13;
-  width: 17vw;
-  height: 7vw;
-  border-radius: 99vw;
-  filter: blur(9px);
-}
-.widget-glossy {
-  background: linear-gradient(115deg,rgba(255,255,255,0.90) 67%, #dbeafe 100%);
-  border: 1px solid rgba(139,92,246,0.10);
-  border-radius: 1.1rem;
-  box-shadow: 0 2px 17px 0 rgba(97,97,255,0.10),0 1px 2px 0 rgba(80,120,250,0.03);
-  backdrop-filter: blur(7px) saturate(144%);
-  transition: box-shadow 0.19s, transform 0.19s;
-}
-.widget-glossy:hover {
-  box-shadow: 0 5px 15px 0 rgba(99,102,241,0.13);
+.animate-fade-in-delay-400 {
+  animation: fade-in-up 0.8s ease-out 0.4s forwards;
+  opacity: 0;
 }
 
-/* Use Tailwind's arbitrary opacity rather than custom classes like opacity-14 or opacity-12. 
-   Instead, use Tailwind's opacity-[.14] (in className) in JSX. Remove those non-Tailwind classes here. */
-
-@media (max-width: 520px) {
-  .widget-glossy { padding: 0.8rem 1.1rem !important; }
+.animate-slide-in-left {
+  animation: slide-in-left 0.8s ease-out forwards;
 }
-@media (max-width: 380px) {
-  .widget-glossy { padding: 0.64rem 0.6rem !important;}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.8s ease-out forwards;
+}
+
+@keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

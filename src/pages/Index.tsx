@@ -8,18 +8,30 @@ import { AbstractShapes } from "@/components/AbstractShapes";
 import { ModernAbstracts } from "@/components/ModernAbstracts";
 import { SimpleLoanCalculator } from "@/components/SimpleLoanCalculator";
 import AnimatedMobilePhone from "@/components/AnimatedMobilePhone";
+import { WhyChooseSection } from "@/components/WhyChooseSection";
+import { PartnersSection } from "@/components/PartnersSection";
 import React from "react";
 import { HeroBackgroundAnimation } from "@/components/HeroBackgroundAnimation";
 
 const Index = () => {
   return (
-    <main className="bg-gradient-to-b from-indigo-50 via-white to-blue-100 min-h-screen overflow-x-hidden relative">
+    <main className="bg-gradient-to-b from-indigo-50 via-white to-blue-100 min-h-screen relative">
       <AbstractShapes />
       <ModernAbstracts />
 
-      {/* Hero Section */}
-      <section className="w-full flex flex-col items-center py-20 bg-gradient-to-br from-indigo-700 via-indigo-800 to-blue-900 text-white shadow-2xl relative overflow-hidden">
+      {/* Hero Section - Fi.money style */}
+      <section className="w-full min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-indigo-700 via-indigo-800 to-blue-900 text-white relative overflow-hidden">
         <HeroBackgroundAnimation />
+        
+        {/* MonthEnd Logo */}
+        <div className="absolute top-8 left-8 z-20">
+          <img 
+            src="/lovable-uploads/8e04e3b3-f5e6-4f27-96ab-acc6b9b6682b.png" 
+            alt="MonthEnd Logo" 
+            className="h-12 w-auto"
+          />
+        </div>
+        
         <AnimatedMobilePhone />
         
         {/* Background animation elements */}
@@ -84,6 +96,11 @@ const Index = () => {
         <HowItWorks />
       </div>
 
+      {/* Why Choose MonthEnd Section */}
+      <div className="relative z-10">
+        <WhyChooseSection />
+      </div>
+
       {/* Loan Calculator */}
       <section className="w-full px-4 py-16 relative z-10 bg-gradient-to-b from-indigo-50 to-white">
         <div className="text-center mb-12 animate-fade-in">
@@ -94,6 +111,11 @@ const Index = () => {
         </div>
         <SimpleLoanCalculator />
       </section>
+
+      {/* Partners Section */}
+      <div className="relative z-10">
+        <PartnersSection />
+      </div>
 
       {/* Benefits/Features */}
       <div className="relative z-10">
