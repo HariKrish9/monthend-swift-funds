@@ -1,44 +1,37 @@
 
 import React from "react";
-import { Zap, Percent, RefreshCw, ShieldCheck, Globe, Smartphone } from "lucide-react";
+import { Gift, CreditCard, House, ShoppingCart, Globe } from "lucide-react";
 
-// Minimalistic, modern, glossy (glass effect + subtle border), compact
 const widgets = [
   {
     title: "Instant Credit",
-    content: "Up to ₹20,000",
-    icon: Zap,
-    color: "bg-white/80 text-indigo-700 border border-indigo-200/60",
+    content: "₹20,000 in 2 mins",
+    icon: CreditCard,
+    color: "widget-glossy",
+  },
+  {
+    title: "Bank-Level Security",
+    content: "256-bit encrypted",
+    icon: Gift,
+    color: "widget-glossy",
+  },
+  {
+    title: "No Paperwork",
+    content: "100% digital process",
+    icon: Globe,
+    color: "widget-glossy",
+  },
+  {
+    title: "Your Salary, Your Control",
+    content: "Auto-repay at payday",
+    icon: House,
+    color: "widget-glossy",
   },
   {
     title: "Low Interest",
-    content: "Only 2% per month",
-    icon: Percent,
-    color: "bg-white/80 text-indigo-700 border border-green-200/60",
-  },
-  {
-    title: "Auto Repay",
-    content: "From your salary",
-    icon: RefreshCw,
-    color: "bg-white/80 text-indigo-700 border border-blue-200/60",
-  },
-  {
-    title: "Secure",
-    content: "Bank-level security",
-    icon: ShieldCheck,
-    color: "bg-white/80 text-indigo-700 border border-violet-200/50",
-  },
-  {
-    title: "100% Digital",
-    content: "No paperwork",
-    icon: Smartphone,
-    color: "bg-white/80 text-indigo-700 border border-fuchsia-200/50",
-  },
-  {
-    title: "All Over India",
-    content: "PAN verified",
-    icon: Globe,
-    color: "bg-white/80 text-indigo-700 border border-sky-200/60",
+    content: "2% per month",
+    icon: ShoppingCart,
+    color: "widget-glossy",
   },
 ];
 
@@ -48,11 +41,11 @@ export const MobileWidgets = () => {
       {widgets.map((widget, index) => (
         <div
           key={index}
-          className={`p-5 rounded-2xl flex items-center gap-4 shadow-md ${widget.color} hover:shadow-lg transition-transform backdrop-blur-xl animate-fade-in-up hover:-translate-y-1`}
-          style={{ animationDelay: `${index * 70}ms` }}
+          className={`p-4 md:p-5 flex items-center gap-4 ${widget.color} hover:shadow-lg transition-transform animate-fade-in-up hover:-translate-y-1`}
+          style={{ animationDelay: `${index * 80}ms` }}
         >
-          <div className="p-2.5 bg-indigo-50/50 rounded-full border border-white/70 shadow-sm">
-            <widget.icon className="w-6 h-6" />
+          <div className="p-2.5 bg-indigo-50/80 rounded-full border border-white/70 shadow-sm">
+            <widget.icon className="w-6 h-6 text-indigo-600" />
           </div>
           <div>
             <h4 className="font-bold text-md">{widget.title}</h4>

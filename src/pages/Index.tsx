@@ -1,4 +1,3 @@
-
 import { HowItWorks } from "@/components/HowItWorks";
 import { Benefits } from "@/components/Benefits";
 import { LoanCalculator } from "@/components/LoanCalculator";
@@ -41,15 +40,11 @@ const Index = () => {
       </section>
 
       {/* Money When You Need It Most Section */}
-      <section className="w-full py-20 relative flex items-center justify-center min-h-[580px] md:min-h-[700px] bg-[linear-gradient(180deg,#f5f7ff_60%,#eef4ff_100%)] overflow-x-hidden">
-        <div className="absolute left-0 right-0 top-1 mx-auto w-full h-[145px] pointer-events-none select-none z-0" aria-hidden></div>
+      <section className="w-full relative flex items-center justify-center min-h-[480px] md:min-h-[570px] bg-[linear-gradient(180deg,#f5f7ff_63%,#f1f5fd_100%)] overflow-x-hidden px-0">
+        <div className="absolute left-0 right-0 top-1 mx-auto w-full h-[100px] pointer-events-none select-none z-0" aria-hidden></div>
         <div className="relative w-full max-w-6xl mx-auto flex flex-col items-center justify-center">
-          {/* Bubble headline will be rendered in FloatingBubbles as glass-text background */}
-          <div style={{ width: "100%", maxWidth: 700 }} className="flex flex-col items-center justify-center">
-            <FloatingBubbles />
-          </div>
-          {/* Subtitle under the grid */}
-          <div className="relative z-20 mt-2 md:mt-6 text-center flex flex-col items-center w-full max-w-xl">
+          <FloatingBubbles />
+          <div className="relative z-20 mt-0 md:mt-4 text-center flex flex-col items-center w-full max-w-xl">
             <p className="text-indigo-900/90 text-base md:text-lg font-semibold drop-shadow-sm animate-fade-in">
               From groceries to gadgets, bills to gifts — MonthEnd covers your urgent expenses, so you can breathe easy till payday.
             </p>

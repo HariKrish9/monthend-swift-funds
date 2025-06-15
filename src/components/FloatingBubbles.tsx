@@ -1,17 +1,14 @@
 
 import React from "react";
 import {
-  Gift, FileText, House, Cross, ShoppingCart, Smartphone, 
-  Utensils, Plane, Car, Shirt, Dumbbell, GraduationCap, 
-  PawPrint, Wrench, PartyPopper, Wifi, Fuel, Tv, Baby, BookOpen, HeartPulse,
-  Receipt, Ticket, Coffee, Film, Pizza, Gamepad2, Music, Laptop, HandCoins, Store, Lightbulb, Key, Wallet, Globe, Bed, Briefcase, Leaf, CreditCard, FlaskConical, Soup, Users, Cloud, Shield
+  Gift, FileText, House, ShoppingCart, Smartphone, Utensils, Plane, Car, Shirt, Dumbbell, GraduationCap, PawPrint, Wrench, PartyPopper, Wifi, Fuel, Tv, Baby, BookOpen, HeartPulse, Receipt, Ticket, Coffee, Film, Pizza, Gamepad2, Music, Laptop, HandCoins, Store, Lightbulb, Key, Wallet, Globe, Bed, Briefcase, Leaf, CreditCard, FlaskConical, Soup, Users, Cloud, Shield
 } from "lucide-react";
 
+// 40+ glossy-looking icons, all unique to avoid duplicates
 const icons = [
   { icon: Gift, label: "Gifts" },
   { icon: FileText, label: "Bills" },
   { icon: House, label: "Home" },
-  { icon: Cross, label: "Medical" },
   { icon: ShoppingCart, label: "Groceries" },
   { icon: Smartphone, label: "Gadgets" },
   { icon: Utensils, label: "Dining" },
@@ -45,7 +42,7 @@ const icons = [
   { icon: Globe, label: "Internet" },
   { icon: Bed, label: "Lodging" },
   { icon: Briefcase, label: "Office" },
-  { icon: Leaf, label: "GroGreen" },
+  { icon: Leaf, label: "Green" },
   { icon: CreditCard, label: "Credit" },
   { icon: FlaskConical, label: "Lab" },
   { icon: Soup, label: "Food" },
@@ -56,45 +53,33 @@ const icons = [
 
 export const FloatingBubbles = () => {
   return (
-    <div className="relative w-full h-full z-10 flex items-center justify-center">
-      {/* Background headline text */}
-      <span className="bubbles-title">
+    <div className="relative flex justify-center items-center w-full min-h-[340px] sm:min-h-[360px] md:min-h-[420px]">
+      {/* Headline is BEHIND the bubbles */}
+      <span className="packed-bubbles-headline select-none">
         Money when you need it most
       </span>
-      {/* Icon Grid */}
-      <div
-        className="grid bubbles-packed relative z-10"
-        style={{
-          width: "100%",
-          maxWidth: 680,
-          margin: "0 auto",
-          placeItems: "center",
-          marginTop: "84px",
-          marginBottom: "40px",
-        }}
-      >
+      <div className="packed-bubbles-grid relative z-10" style={{ marginTop: "90px", marginBottom: "20px" }}>
         {icons.map(({ icon: Icon, label }, idx) => (
           <div
             key={label}
-            className="bubble-glossy flex flex-col items-center justify-center rounded-2xl py-2 px-0.5 md:p-2 transition-transform hover:scale-105 shadow-md relative"
+            className="bubble-glossy flex flex-col items-center justify-center rounded-2xl py-2 px-1 transition-transform"
             style={{
-              minWidth: 54,
-              minHeight: 54,
-              maxWidth: 64,
-              margin: "2px",
+              minWidth: 47,
+              minHeight: 47,
+              maxWidth: 60,
               zIndex: 3,
-              boxShadow: "0 2px 15px 0 rgba(99,102,241,0.09), 0 0.5px 2px 0 rgba(80,120,250,0.09)",
+              margin: "1px",
             }}
           >
             <Icon
-              size={30}
+              size={27}
               className="mb-1 text-indigo-600"
               style={{
                 filter:
-                  "drop-shadow(0 1.5px 7px rgba(130,140,255,0.35)) drop-shadow(0 0px 1px white)",
+                  "drop-shadow(0 1.5px 7px rgba(130,140,255,0.30)) drop-shadow(0 0px 1px white)",
               }}
             />
-            <span className="text-[0.72rem] leading-none font-medium text-indigo-900/80 mt-1 opacity-85">
+            <span className="text-[0.71rem] leading-none font-medium text-indigo-900/80 mt-1 opacity-90">
               {label}
             </span>
           </div>
