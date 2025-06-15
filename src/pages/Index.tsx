@@ -29,12 +29,12 @@ const Index = () => {
         <div
           className="
             absolute z-30 
-            left-2 top-2
-            md:left-6 md:top-4
-            lg:left-10 lg:top-6
+            left-2
+            top-[10vh]
+            md:left-6 md:top-[10vh]
+            lg:left-10 lg:top-[10vh]
             flex items-center
             pointer-events-none"
-          style={{ }}
         >
           <img
             src="/lovable-uploads/88a6e1b5-0555-47fb-9fa0-e26739f449e5.png"
@@ -52,7 +52,7 @@ const Index = () => {
         </div>
 
         {/* Animated Mobile Phone FRONT AND CENTER */}
-        <div className="relative z-20 flex flex-col items-center w-full max-w-lg mt-24">
+        <div className="relative z-20 flex flex-col items-center w-full max-w-lg mt-[10vh]">
           <AnimatedMobilePhone />
         </div>
 
