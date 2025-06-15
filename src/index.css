@@ -162,7 +162,7 @@ body {
 }
 
 /* --------- BUBBLE/GRID STYLE --------- */
-// Add global style for glassmorphic bubble effect
+/* Add global style for glassmorphic bubble effect */
 .bubble-glossy {
   background: linear-gradient(120deg, rgba(255,255,255,0.90) 72%, rgba(240,240,255,0.85) 100%);
   box-shadow: 0 4px 32px 0 rgba(99,102,241,0.08), 0 1.5px 8px 0 rgba(99,102,241,0.13);
@@ -279,3 +279,4 @@ body {
 @media (max-width: 380px) {
   .widget-glossy { padding: 0.64rem 0.6rem !important;}
 }
+
