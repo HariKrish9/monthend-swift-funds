@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -160,6 +161,7 @@ body {
   }
 }
 
+/* --------- BUBBLE/GRID STYLE --------- */
 // Add global style for glassmorphic bubble effect
 .bubble-glossy {
   background: linear-gradient(120deg, rgba(255,255,255,0.90) 72%, rgba(240,240,255,0.85) 100%);
@@ -220,19 +222,17 @@ body {
   .packed-bubbles-grid { grid-template-columns: repeat(5, 1fr); max-width: 99vw;}
 }
 
-/* Fix for body - overflow/scroll smoothness. Remove or correct double negative/invalid properties. */
+/* Fixed html/body scroll/overflow issues */
 html, body {
   height: 100%;
   overflow-x: hidden;
+  /* Only apply scroll-behavior on html, remove duplicates; no negative/invalid properties */
   scroll-behavior: smooth;
 }
-
 body {
   min-height: 100vh;
   background-color: #fff;
-  /* Remove conflicting overscroll-behavior and other buggy lines */
-  /*-webkit-overflow-scrolling: touch;*/
-  /* overscroll-behavior-y: none; */
+  /* Remove nonstandard or deprecated properties */
 }
 
 /* Abstract styles updated for correct Tailwind-like opacity syntax. */
