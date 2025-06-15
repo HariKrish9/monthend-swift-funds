@@ -1,4 +1,3 @@
-
 import { HowItWorks } from "@/components/HowItWorks";
 import { Benefits } from "@/components/Benefits";
 import { PreSignupForm } from "@/components/PreSignupForm";
@@ -24,16 +23,14 @@ const Index = () => {
       {/* Hero Section - Fi.money style */}
       <section className="w-full min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-indigo-700 via-indigo-800 to-blue-900 text-white relative py-16">
         <HeroBackgroundAnimation />
-        {/* MonthEnd Logo */}
-        <div className="absolute top-6 left-6 z-20">
-          <div className="backdrop-blur-md bg-white/10 rounded-xl shadow-lg shadow-black/10 p-3 flex items-center">
-            <img
-              src="/lovable-uploads/88a6e1b5-0555-47fb-9fa0-e26739f449e5.png"
-              alt="MonthEnd Logo"
-              className="h-16 w-auto object-contain"
-              style={{ filter: 'drop-shadow(0 2px 12px rgba(80, 90, 255, 0.13))' }}
-            />
-          </div>
+        {/* MonthEnd Logo - BIG, NO BACKGROUND */}
+        <div className="absolute top-4 left-4 z-20">
+          <img
+            src="/lovable-uploads/88a6e1b5-0555-47fb-9fa0-e26739f449e5.png"
+            alt="MonthEnd Logo"
+            className="h-32 w-auto object-contain"
+            style={{ background: "none", boxShadow: "none", borderRadius: "0", padding: 0, filter: 'drop-shadow(0 4px 16px rgba(80, 90, 255, 0.10))' }}
+          />
         </div>
 
         {/* Animated Mobile Phone FRONT AND CENTER */}
@@ -162,4 +159,3 @@ const Index = () => {
 };
 
 export default Index;
-
