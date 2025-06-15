@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Home, Clock, CreditCard, Shield, Zap } from "lucide-react";
 
