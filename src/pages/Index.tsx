@@ -1,4 +1,3 @@
-
 import { HowItWorks } from "@/components/HowItWorks";
 import { Benefits } from "@/components/Benefits";
 import { LoanCalculator } from "@/components/LoanCalculator";
@@ -41,8 +40,8 @@ const Index = () => {
       </section>
 
       {/* Money When You Need It Most Section */}
-      <section className="w-full py-20 flex flex-col items-center bg-gradient-to-b from-white to-indigo-50 relative">
-        <div className="text-center mb-12 relative z-10 px-4">
+      <section className="w-full py-20 relative">
+        <div className="text-center mb-4 relative z-10 px-4">
           <h3 className="text-4xl md:text-5xl font-bold text-indigo-900 mb-4 animate-fade-in">
             Money when you need it most
           </h3>
@@ -52,13 +51,13 @@ const Index = () => {
         </div>
         
         {/* Floating bubbles container */}
-        <div className="relative w-full max-w-5xl h-[600px] mb-16">
+        <div className="relative w-full max-w-6xl h-[650px] mx-auto -mt-8">
           <FloatingBubbles />
         </div>
       </section>
 
       {/* Problem Statement with Mobile Widgets */}
-      <section className="w-full py-16 flex flex-col md:flex-row gap-12 justify-center items-center bg-white px-4">
+      <section className="w-full py-16 flex flex-col md:flex-row gap-12 justify-center items-center bg-white px-4 relative z-10">
         <div className="max-w-xl animate-slide-in-left">
           <h3 className="text-3xl md:text-4xl font-bold mb-6 text-indigo-900 leading-tight">
             Why MonthEnd?
@@ -87,10 +86,12 @@ const Index = () => {
       </section>
 
       {/* How it Works */}
-      <HowItWorks />
+      <div className="relative z-10">
+        <HowItWorks />
+      </div>
 
       {/* Loan Calculator */}
-      <section className="w-full max-w-6xl mx-auto px-4 py-16">
+      <section className="w-full max-w-6xl mx-auto px-4 py-16 relative z-10">
         <div className="text-center mb-12 animate-fade-in">
           <h3 className="text-3xl md:text-4xl font-bold text-indigo-900 mb-4">See Your Loan Details</h3>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
@@ -101,10 +102,12 @@ const Index = () => {
       </section>
 
       {/* Benefits/Features */}
-      <Benefits />
+      <div className="relative z-10">
+        <Benefits />
+      </div>
 
       {/* Call to Action + PreSignup */}
-      <section id="get-started" className="bg-gradient-to-r from-indigo-800 via-indigo-900 to-blue-900 py-16 px-4 mt-16 relative overflow-hidden">
+      <section id="get-started" className="bg-gradient-to-r from-indigo-800 via-indigo-900 to-blue-900 py-16 px-4 mt-16 relative overflow-hidden z-10">
         {/* Background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-0 left-1/4 w-64 h-64 bg-white/5 rounded-full blur-3xl animate-bounce-subtle"></div>
@@ -126,7 +129,7 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="py-8 text-center text-sm text-gray-400 bg-gray-50">
+      <footer className="py-8 text-center text-sm text-gray-400 bg-gray-50 relative z-10">
         <div className="animate-fade-in">
           &copy; {new Date().getFullYear()} MonthEnd. All rights reserved.
         </div>

@@ -3,7 +3,8 @@ import React, { useMemo } from 'react';
 import { 
   Gift, FileText, House, Cross, ShoppingCart, Smartphone, 
   Utensils, Plane, Car, Shirt, Dumbbell, GraduationCap, 
-  PawPrint, Wrench, PartyPopper, Wifi, Fuel, Tv, Baby, BookOpen, HeartPulse 
+  PawPrint, Wrench, PartyPopper, Wifi, Fuel, Tv, Baby, BookOpen, HeartPulse,
+  Receipt, Ticket, Coffee, Film, Pizza, Gamepad2, Music, Laptop, HandCoins, Store
 } from 'lucide-react';
 
 const bubbleData = [
@@ -28,6 +29,16 @@ const bubbleData = [
   { icon: Baby, label: 'Childcare' },
   { icon: BookOpen, label: 'Books' },
   { icon: HeartPulse, label: 'Health' },
+  { icon: Receipt, label: 'Receipts' },
+  { icon: Ticket, label: 'Tickets' },
+  { icon: Coffee, label: 'Coffee' },
+  { icon: Film, label: 'Movies' },
+  { icon: Pizza, label: 'Pizza' },
+  { icon: Gamepad2, label: 'Games' },
+  { icon: Music, label: 'Music' },
+  { icon: Laptop, label: 'Electronics' },
+  { icon: HandCoins, label: 'Allowances' },
+  { icon: Store, label: 'General' },
 ];
 
 export const FloatingBubbles = () => {
@@ -37,7 +48,7 @@ export const FloatingBubbles = () => {
       id: index,
       style: {
         top: `${Math.random() * 85}%`,
-        left: `${Math.random() * 85}%`,
+        left: `${Math.random() * 90}%`,
         animationDelay: `${Math.random() * 5}s`,
         animationDuration: `${Math.random() * 3 + 4}s`,
         transform: `scale(${Math.random() * 0.3 + 0.8})`,
