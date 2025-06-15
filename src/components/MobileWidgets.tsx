@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Gift, CreditCard, House, ShoppingCart, Globe } from "lucide-react";
 
@@ -8,7 +7,6 @@ const widgets = [
     content: "₹20,000 in 2 mins",
     icon: CreditCard,
   },
-  // REMOVED: "Bank-Level Security"
   {
     title: "No Paperwork",
     content: "100% digital process",

@@ -102,14 +102,15 @@
   }
 }
 
-/* Smooth scrolling for better UX */
+/* Smooth scrolling and overflow fix for better UX */
 html {
   scroll-behavior: smooth;
-  overscroll-behavior-y: none;
 }
 
 body {
+  min-height: 100vh;
   overscroll-behavior-y: none;
+  overflow-x: hidden;
 }
 
 /* Custom animations inspired by modern fintech apps */
@@ -161,7 +162,7 @@ body {
 }
 
 /* --------- BUBBLE/GRID STYLE --------- */
-/* Neutral, non-glossy look for icon grid; .bubble-glossy left for future/shadows only if reused */
+/* Neutral, non-glossy look for icon grid */
 .bubble-grid-icon {
   display: flex;
   flex-direction: column;
@@ -216,19 +217,6 @@ body {
 }
 @media (max-width: 439px) {
   .packed-bubbles-grid { grid-template-columns: repeat(5, 1fr); max-width: 99vw;}
-}
-
-/* Fixed html/body scroll/overflow issues */
-html, body {
-  height: 100%;
-  overflow-x: hidden;
-  /* Only apply scroll-behavior on html, remove duplicates; no negative/invalid properties */
-  scroll-behavior: smooth;
-}
-body {
-  min-height: 100vh;
-  background-color: #fff;
-  /* Remove nonstandard or deprecated properties */
 }
 
 /* Abstract styles updated for correct Tailwind-like opacity syntax. */
