@@ -53,7 +53,7 @@ const Index = () => {
         </div>
 
         {/* Animated Mobile Phone FRONT AND CENTER */}
-        <div className="relative z-20 flex flex-col items-center w-full max-w-lg mt-[10vh]">
+        <div className="relative z-20 flex flex-col items-center w-full max-w-lg mt-[5vh]">
           <AnimatedMobilePhone />
         </div>
 
